@@ -1,0 +1,21 @@
+{% extends 'book/base_book.html' %}
+
+{% block title %}
+    Books list
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-5">Books:</h1>
+    {% for book in books %}
+        <div class="card mb-4">
+            <div class="card-header">
+                {{ book.author_name }}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{book.title }}</h5>
+                <p class="card-text">{{book.id}}</p>
+                <a href="{{ book.get_absolute_url }}" class="btn btn-light">Read</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

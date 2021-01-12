@@ -1,0 +1,17 @@
+{% extends 'book/base_book.html' %}
+
+{% block title %}
+    {{ book.title}} -{{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-5">
+    {{ book.title }}
+    </h1>
+    <p>
+    {{ book.author_name }}
+    </p>
+    <p>
+    {{ book.description}}
+    </p>
+{% endblock %}
