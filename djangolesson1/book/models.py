@@ -11,7 +11,7 @@ class Book(models.Model):
     description = models.TextField(blank=True, db_index=True)
 
     def get_absolute_url(self):
-        return reverse('book_detail_url', kwargs={'id': self.id})
+        return reverse('book_detail_url', kwargs={'pk': self.id})
 
     def __str__(self):
         return self.title

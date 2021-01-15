@@ -6,7 +6,7 @@
 
 {% block content %}
     <h1 class="mb-5">Books:</h1>
-    {% for book in books %}
+    {% for book in object_list%}
         <div class="card mb-4">
             <div class="card-header">
                 {{ book.author_name }}
